@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 
 const CategoryListItem = (props) => {
 
-    const { category } = props;
+    const { category, onPress } = props;
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>{category.name}</Text>
-        </View>
+        <TouchableOpacity onPress={onPress}>
+            <View style={styles.container}>
+                <Text style={styles.title}>{category.name}</Text>
+            </View>
+        </TouchableOpacity>
     )
 }
 
